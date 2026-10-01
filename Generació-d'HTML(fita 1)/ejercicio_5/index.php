@@ -4,6 +4,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Generació HTML</title>
+    <style>
+        .ej_table {
+              border-collapse: collapse;
+            }
+
+
+        .ej_table td {
+          border: 1px solid black;
+          padding: 10px;
+          text-align: center;
+        }
+    </style>
 </head>
 <body>
 	<h1>EJERCICI 5</h1>
