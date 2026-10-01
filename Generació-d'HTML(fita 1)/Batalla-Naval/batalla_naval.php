@@ -28,7 +28,6 @@ function crearMatrizVacia($n) {
 	return $m;
 }
  
-// Pinta la matriz con la MISMA estructura de tabla que tu ejercicio 4
 function pintarTablero($matriz, $letras, $n) {
 	echo "<table border='1'>";
  
@@ -52,8 +51,6 @@ function pintarTablero($matriz, $letras, $n) {
  
 	echo "</table>";
 }
- 
-// Devuelve las celdas [fila, columna] que ocupa un barco
 function celdasDelBarco($barco) {
 	$celdas = [];
 	for ($i = 0; $i < $barco['longitud']; $i++) {
@@ -65,8 +62,6 @@ function celdasDelBarco($barco) {
 	}
 	return $celdas;
 }
- 
-// Genera un barco aleatorio que cabe dentro del tablero (ejercicio 2)
 function generarBarcoAleatorio($longitud, $n) {
 	$orientacion = (mt_rand(0, 1) === 0) ? "H" : "V";
  
@@ -86,7 +81,6 @@ function dentroDeLimites($fila, $columna, $n) {
 	return $fila >= 0 && $fila < $n && $columna >= 0 && $columna < $n;
 }
  
-// Comprueba que el barco no se solapa ni toca con otro ya colocado (ejercicio 6)
 function posicionValida($matriz, $barco, $n) {
 	$celdas = celdasDelBarco($barco);
  
@@ -106,7 +100,6 @@ function posicionValida($matriz, $barco, $n) {
 	return true;
 }
  
-// Coloca un barco reintentando hasta que la posición sea válida
 function colocarBarcoValido(&$matriz, $longitud, $codigo, $n) {
 	$intentos = 0;
 	do {
@@ -122,7 +115,6 @@ function colocarBarcoValido(&$matriz, $longitud, $codigo, $n) {
 	}
 }
  
-// Flota estándar: 4 fragatas, 3 submarinos, 2 destructores, 1 portaaviones
 $FLOTA = [
 	["codigo" => "F", "longitud" => 1, "cantidad" => 4],
 	["codigo" => "S", "longitud" => 2, "cantidad" => 3],
